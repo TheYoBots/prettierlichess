@@ -1,20 +1,20 @@
 {
-    "name": "Prettier Lichess",
-    "version": "3.3.1",
+    "name": "Prettier Lishogi",
+    "version": "1.0.0",
     "manifest_version": 2,
-    "description": "Lichess, but prettier.",
+    "description": "Lishogi, but prettier.",
     "icons": {
         "128": "icon_128.png"
     },
     "content_scripts": [{
-            "matches": ["*://lichess.org/*"],
-            "exclude_matches": ["*://lichess.org/api*"],
+            "matches": ["*://lishogi.org/*"],
+            "exclude_matches": ["*://lishogi.org/api*"],
             "run_at": "document_start",
             "css": ["styles.css"],
             "js": ["content.js"]
         },
         {
-            "matches": ["*://lichess.org/*"],
+            "matches": ["*://lishogi.org/*"],
             "run_at": "document_idle",
             "js": ["postLoad.js"]
         }
@@ -22,7 +22,7 @@
     "browser_action": {
         "default_popup": "popup.html"
     },
-    "permissions": ["activeTab", "storage", "declarativeContent", "downloads", "*://lichess.org/*"],
+    "permissions": ["activeTab", "storage", "declarativeContent", "downloads", "*://lishogi.org/*"],
     "background": {
         "scripts": ["background.js"],
         "persistant": false
